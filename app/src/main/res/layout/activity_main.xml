@@ -12,8 +12,8 @@
         android:id="@+id/editText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="输入第一段文字"
         android:maxLines="1"
-        android:text="输入第一段文字"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,8 +24,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:hint="输入第二段文字"
         android:maxLines="1"
-        android:text="输入第二段文字"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="输入文件名(非必须)"
+        android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="生成结果" />
+            android:text="生成文件" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button2"
@@ -49,8 +62,17 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_weight="1"
-            android:text="拷贝结果" />
+            android:text="分享文件" />
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="文件存储路径："
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="10dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -63,13 +85,12 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textView"
-                copyable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="结果显示在这里"
                 android:textColor="@android:color/black"
-                android:textSize="8dp" />
+                android:textSize="10dp" />
         </LinearLayout>
     </ScrollView>
 </androidx.appcompat.widget.LinearLayoutCompat>
